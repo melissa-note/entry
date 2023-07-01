@@ -119,7 +119,7 @@
                 const min = $('input[name="min"]').val();
                 const max  = $('input[name="max"]').val();
                 const looks1 = $('input[name="looks1"]').val();
-                const msg = `★${date}\n備考：${bikou}\n---${nname}-${age}-${looks0}\n---${min}-${max}-${looks1}`;
+                const msg = `【予約内容】\n${date}\n備考：${bikou}\n---${nname}-${age}-${looks0}\n---${min}-${max}-${looks1}`;
                 sendText(msg);
                 return false;
             });
