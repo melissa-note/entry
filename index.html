@@ -119,7 +119,7 @@
                 const min = $('input[name="min"]').val();
                 const max  = $('input[name="max"]').val();
                 const looks1 = $('input[name="looks1"]').val();
-                const msg = `★``${date}\n``備考欄：``${bikou}\n``---``${nname}``-``${age}``-``${looks}\n``---``${min}``-``${max})\n${looks1}`;
+                const msg = `${date}\n${bikou}\n${nname}\n${age}\n${looks}\n${min}\n${max})\n${looks1}`;
                 sendText(msg);
                 return false;
             });
