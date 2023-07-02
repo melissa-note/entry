@@ -34,20 +34,20 @@
         </div>
         <div>
         <p class="mt-3"　required>見た目</p>
-        <input id="l1" type="checkbox" name="looks0[]" value="A"><label for="l1">A</label>
-        <input id="l2" type="checkbox" name="looks0[]" value="B"><label for="l2">B</label>
-        <input id="l3" type="checkbox" name="looks0[]" value="C"><label for="l3">C</label>
-        <input id="l4" type="checkbox" name="looks0[]" value="わからない"><label for="l4">b</label>
+        <input id="l1" type="checkbox" name="looks0" value="A"><label for="l1">A</label>
+        <input id="l2" type="checkbox" name="looks0" value="B"><label for="l2">B</label>
+        <input id="l3" type="checkbox" name="looks0" value="C"><label for="l3">C</label>
+        <input id="l4" type="checkbox" name="looks0" value="わからない"><label for="l4">b</label>
     </div>
 <p>理想の相手について</p>        
         <div>   
         <p class="mt-3">年齢層</p>   
         <span>*複数選択可</span>      
-        <input id="20" type="checkbox" name="age1[]" value="20代"><label for="20">20代</label>
-        <input id="30" type="checkbox" name="age1[]" value="30代"><label for="30">30代</label>
-        <input id="40" type="checkbox" name="age1[]" value="40代"><label for="40">40代</label>
-        <input id="50" type="checkbox" name="age1[]" value="50代"><label for="50">50代</label>
-        <input id="any0" type="checkbox" name="age1[]" value="年齢気にしない"><label for="any0">年齢気にしない</label>                                                                                                      
+        <input id="20" type="checkbox" name="age1" value="20代"><label for="20">20代</label>
+        <input id="30" type="checkbox" name="age1" value="30代"><label for="30">30代</label>
+        <input id="40" type="checkbox" name="age1" value="40代"><label for="40">40代</label>
+        <input id="50" type="checkbox" name="age1" value="50代"><label for="50">50代</label>
+        <input id="any0" type="checkbox" name="age1" value="年齢気にしない"><label for="any0">年齢気にしない</label>                                                                                                      
         </div>
         <div>
         <p class="mt-3"　required>見た目</p>
@@ -106,16 +106,16 @@
                 const bikou = $('input[name="bikou"]').val();
                 const nname = $('input[name="nname"]').val();
                 const age0  = $('input[name="age0"]').val();
-                const looks0  = $('input[name="looks0"]:checked').val();
-                //const age1 = $('input[name="age1"]:checked').val();
+                const looks0 = $('input[name=looks0]:checked').map(function(){
+                   return $(this).val();
+                 }).get();
                 const age1 = $('input[name=age1]:checked').map(function(){
                    return $(this).val();
                  }).get();
-                //const looks1 = $('input[name="looks1"]:checked').val();
                 const looks1 = $('input[name=looks1]:checked').map(function(){
                    return $(this).val();
                  }).get();
-                const msg = `--- 予約内容 ---\n${date}\n備考：${bikou}\n---${nname}-${age0}-${looks0}\n---${age1}-${looks1}`;
+                const msg = `   --- 予約内容 ---\n${date}\n備考：${bikou}\n---${nname}-${age0}-${looks0}\n---${age1}-${looks1}`;
                 sendText(msg);
                 return false;
             });
