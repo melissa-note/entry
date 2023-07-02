@@ -102,13 +102,13 @@
 
         $(function () {
             $('form').submit(function () {
-                const date    = $('input[name="date"]').val();
+                const date    = $('input[name="date"] option:selected').val();
                 const bikou = $('input[name="bikou"]').val();
                 const nname = $('input[name="nname"]').val();
                 const age0  = $('input[name="age0"]').val();
-                const looks0  = $('input[name="looks0"]').val();
-                const age1 = $('input[name="age1"]').val();
-                const looks1 = $('input[name="looks1"]').val();
+                const looks0  = $('input[name="looks0"]:checked').val();
+                const age1 = $('input[name="age1"]:checked').val();
+                const looks1 = $('input[name="looks1"]:checked').val();
                 const msg = `【予約内容】\n${date}\n備考：${bikou}\n---${nname}-${age0}-${looks0}\n---${age1}-${looks1}`;
                 sendText(msg);
                 return false;
