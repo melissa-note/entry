@@ -11,7 +11,7 @@
 <body>
     <form class="w-75 mx-auto">
         <p class="mt-3">日時</p>
-                    <select name="date" class="target">
+                    <select name="date" id="date">
 <option value="">選択してください</option>
 <option value="【新宿】7/1（土）18:30～">【新宿】7/1（土）18:30～20:30</option>
 <option value="【新宿】7/8（土）18:30～">【新宿】7/8（土）18:30～20:30</option>
@@ -102,20 +102,20 @@
 
         $(function () {
             $('form').submit(function () {
-                const date    = $('.target option:selected').val();
+                const date = $("#date").val();
                 const bikou = $('input[name="bikou"]').val();
                 const nname = $('input[name="nname"]').val();
                 const age0  = $('input[name="age0"]').val();
                 const looks0  = $('input[name="looks0"]:checked').val();
                 //const age1 = $('input[name="age1"]:checked').val();
-                 $('[name="age1"]:checked').map(function() {
-                 const age1 = $(this).val();
-                 });
+                const age1 = $('input[name=age1]:checked').map(function(){
+                   return $(this).val();
+                 }).get();
                 //const looks1 = $('input[name="looks1"]:checked').val();
-                 $('[name="looks1"]:checked').map(function() {
-                 const looks1 = $(this).val();
-                 });
-                const msg = `【予約内容】\n${date}\n備考：${bikou}\n---${nname}-${age0}-${looks0}\n---${age1}-${looks1}`;
+                const looks1 = $('input[name=looks1]:checked').map(function(){
+                   return $(this).val();
+                 }).get();
+                const msg = `--- 予約内容 ---\n${date}\n備考：${bikou}\n---${nname}-${age0}-${looks0}\n---${age1}-${looks1}`;
                 sendText(msg);
                 return false;
             });
