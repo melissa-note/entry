@@ -115,7 +115,7 @@
                 const looks1 = $('input[name=looks1]:checked').map(function(){
                    return $(this).val();
                  }).get();
-                const msg = `   --- 予約内容 ---\n${date}\n備考：${bikou}\n---${nname}-${age0}-${looks0}\n---${age1}-${looks1}`;
+                const msg = `   --- 申込み内容 ---\n${date}\n備考：${bikou}\n${nname}-${age0}-${looks0}\n${age1}-${looks1}`;
                 sendText(msg);
                 return false;
             });
