@@ -8,6 +8,9 @@
 	font-size: 18px;
 	font-weight: bold;
 }
+.center{
+	text-align: center;
+}
 /* dot line */
 .dotted {
         margin-top: 1em;
