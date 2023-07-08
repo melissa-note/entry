@@ -64,7 +64,7 @@
        </details></div>
         <p class="dotted">備考欄</p>
         <div>
-            <textarea class="input-box" name="bikou" cols="30" rows="3"></textarea>
+            <textarea class="input-box" name="bikou" cols="30" rows="3" id="bikou"></textarea>
         </div>
         <input type="submit" class="btn btn--red btn--radius btn--cubic" value="この内容で予約">
     </form>
@@ -108,7 +108,7 @@
         $(function () {
             $('form').submit(function () {
                 const date = $("#date").val();
-                const bikou = $('input[name="bikou"]').val();
+                const bikou = document.getElementById("bikou").value;//$('textarea[name="bikou"]').val();
                 const nname = $('input[name="nname"]').val();
                 const age0  = $('input[name="age0"]').val();
                 const looks0 = $('input[name=looks0]:checked').map(function(){
