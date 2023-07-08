@@ -86,7 +86,6 @@ button.btn {
   color: #212529;
   border-radius: 0.5rem;
   margin-top: 10px;
-  margin-left: 10%;
 }
 .btn--red.btn--cubic {
   border-bottom: 5px solid green;
