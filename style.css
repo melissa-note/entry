@@ -88,7 +88,7 @@ button.btn {
 }
 
 .btn--red.btn--cubic:hover {
-  margin-top: 3px;
+  margin-top: 13px;
   border-bottom: 2px solid green;
 }
 
