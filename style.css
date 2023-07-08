@@ -1,5 +1,5 @@
-.fz-12px{
-	font-size: 12px;
+.fz-6px{
+	font-size: 6px;
 }
 .fz-12px{
 	font-size: 14px;
@@ -16,7 +16,6 @@
 	border-bottom: 3px dotted gray;
 	padding: 10px;
 	font-size: 16px;
-	font-weight: bold;
 }
 .dotted1 {
         margin-top: 1em;
@@ -25,7 +24,6 @@
 	border-bottom: 3px dotted orange;
 	padding: 10px;
 	font-size: 16px;
-	font-weight: bold;
 }
 .dotted2 {
         margin-top: 1em;
@@ -34,7 +32,6 @@
 	border-bottom: 3px dotted green;
 	padding: 10px;
 	font-size: 16px;
-	font-weight: bold;
 }
 .dotted3{
         margin-top: 1em;
@@ -43,12 +40,11 @@
 	border-bottom: solid 3px #ae9984;
 	padding: 10px;
 	font-size: 16px;
-	font-weight: bold;
 }
 /* 必須マーク */
 .must{
 	color: #cf2e2e;
-	padding: 0 0 5px 5px;
+/* 	padding: 0 0 5px 5px; */
 	font-size: 14px;
 }
 /* フォームを囲むボックス 大枠*/
