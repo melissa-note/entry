@@ -4,45 +4,47 @@
     <meta http-equiv="Content-Type" content="text/html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>予約申込みフォーム</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel=”stylesheet” href=”https://melissa-note.github.io/entry/style.css”/>
 </head>
 <body>
-    <form class="w-75 mx-auto">
-        <p class="mt-3">日時</p>
-                    <select name="date" id="date">
+    <form class="contact-box">
+        <p class="dotted2">日時</p>
+            <select name="date" id="date" required>
 <option value="">選択してください</option>
 <option value="【新宿】7/1（土）18:30～">【新宿】7/1（土）18:30～20:30</option>
 <option value="【新宿】7/8（土）18:30～">【新宿】7/8（土）18:30～20:30</option>
             </select>
         
         <p>あなたと他のメンバーとの相性診断のため、質問に回答してください。</p>
-<span class="must bold">※初回のみ必須</span>　<span class="fz-12px">※2023年以降ご回答いただいた場合、変更なければ回答不要です。</span>
+<span class="must bold">*初回のみ必須</span>　<span class="fz-12px">*変更なければ回答不要です。予約エラーが出る場合は全て回答をお願いします。</span>
 <details><summary class="center bold">回答する<span class="fz-14px">（所要時間約1分）</span></summary>
     
+    <div class="contact-box">
     <p>あなたのことについて</p>        
-    <p class="mt-3">ニックネーム</p>
-        <span>*参加者に公開されます。</span>
+    <p class="dotted2">ニックネーム</p>
+        <span class ="must">*当日の参加者に公開されます。</span>
         <div>            
             <input class="form-control w-100 mt-1" name="nname">                                                                                                                    
         </div>
-        <p class="mt-3">年齢</p>        
-        <span>*20歳以上から参加できます。</span>
+        <p class="dotted2">年齢</p>        
+        <span class ="must">*20歳以上から参加できます。</span>
         <div>
             <input type = "number" name="age0" min="20" max="70">歳                                                                                                            
         </div>
         <div>
-        <p class="mt-3"　required>見た目</p>
-        <input id="l1" type="checkbox" name="looks0" value="A"><label for="l1">A</label>
-        <input id="l2" type="checkbox" name="looks0" value="B"><label for="l2">B</label>
-        <input id="l3" type="checkbox" name="looks0" value="C"><label for="l3">C</label>
+        <p class="dotted2"　required>見た目</p>
+        <span class="fz-12px">*複数選択可</span>
+        <input id="l1" type="checkbox" name="looks0" value="フェム（女性っぽい）"><label for="l1">フェム（女性っぽい）</label>
+        <input id="l2" type="checkbox" name="looks0" value="中性（その中間）"><label for="l2">中性（その中間）</label>
+        <input id="l3" type="checkbox" name="looks0" value="ボイ（男性っぽい）"><label for="l3">ボイ（男性っぽい）</label>
         <input id="l4" type="checkbox" name="looks0" value="わからない"><label for="l4">b</label>
+        </div>
     </div>
+    <div class="contact-box">
 <p>理想の相手について</p>        
         <div>   
-        <p class="mt-3">年齢層</p>   
-        <span>*複数選択可</span>      
+        <p class="dotted1">年齢層</p>   
+        <span class="fz-12px">*複数選択可</span>      
         <input id="20" type="checkbox" name="age1" value="20代"><label for="20">20代</label>
         <input id="30" type="checkbox" name="age1" value="30代"><label for="30">30代</label>
         <input id="40" type="checkbox" name="age1" value="40代"><label for="40">40代</label>
@@ -50,14 +52,15 @@
         <input id="any0" type="checkbox" name="age1" value="年齢気にしない"><label for="any0">年齢気にしない</label>                                                                                                      
         </div>
         <div>
-        <p class="mt-3"　required>見た目</p>
-        <input id="l5" type="checkbox" name="looks1" value="A"><label for="l5">A</label>
-        <input id="l6" type="checkbox" name="looks1" value="B"><label for="l6">B</label>
-        <input id="l7" type="checkbox" name="looks1" value="C"><label for="l7">C</label>
+        <p class="dotted1"　required>見た目</p>
+        <span class="fz-12px">*複数選択可</span>
+        <input id="l5" type="checkbox" name="looks1" value="フェム（女性っぽい）"><label for="l5">フェム（女性っぽい）</label>
+        <input id="l6" type="checkbox" name="looks1" value="中性（その中間）"><label for="l6">中性（その中間）</label>
+        <input id="l7" type="checkbox" name="looks1" value="ボイ（男性っぽい）"><label for="l7">ボイ（男性っぽい）</label>
         <input id="l8" type="checkbox" name="looks1" value="見た目気にしない"><label for="l8">見た目気にしない</label>
-    </div>   
+    </div>   </div>
        </details>
-        <p class="mt-3">備考欄</p>
+        <p class="dotted">備考欄</p>
         <div>
             <input class="form-control w-100 mt-1" name="bikou">
         </div>
@@ -115,7 +118,7 @@
                 const looks1 = $('input[name=looks1]:checked').map(function(){
                    return $(this).val();
                  }).get();
-                const msg = `   --- 申込み内容 ---\n${date}\n備考：${bikou}\n${nname}-${age0}-${looks0}\n${age1}-${looks1}`;
+                const msg = `--- 申込み内容 ---\n${date}\n備考：${bikou}\n${nname}-${age0}-${looks0}\n${age1}-${looks1}`;
                 sendText(msg);
                 return false;
             });
