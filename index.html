@@ -108,7 +108,7 @@
         $(function () {
             $('form').submit(function () {
                 const date = $("#date").val();
-                const bikou = document.getElementById("bikou").value;//$('textarea[name="bikou"]').val();
+                const bikou = $('textarea[name="bikou"]').val();//document.getElementById("bikou").value;
                 const nname = $('input[name="nname"]').val();
                 const age0  = $('input[name="age0"]').val();
                 const looks0 = $('input[name=looks0]:checked').map(function(){
