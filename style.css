@@ -59,13 +59,12 @@
 	border-radius:10px;
 }
 /* テキストエリア */
-textarea.input-box{
+/* textarea.input-box{
 	height:unset;
-}
+} */
 .btn,
-a.btn,
 button.btn {
-  font-size: 1.6rem;
+  font-size: 0.6rem;
   font-weight: 700;
   line-height: 1.5;
   position: relative;
@@ -85,11 +84,11 @@ button.btn {
   color: #212529;
   border-radius: 0.5rem;
 }
-a.btn--red.btn--cubic {
+.btn--red.btn--cubic {
   border-bottom: 5px solid #9f000c;
 }
 
-a.btn--red.btn--cubic:hover {
+.btn--red.btn--cubic:hover {
   margin-top: 3px;
   border-bottom: 2px solid #9f000c;
 }
