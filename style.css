@@ -1,5 +1,5 @@
 .fz-6px{
-	font-size: 6px;
+	font-size: 12px;
 }
 .fz-12px{
 	font-size: 14px;
@@ -44,8 +44,6 @@
 /* 必須マーク */
 .must{
 	color: #cf2e2e;
-/* 	padding: 0 0 5px 5px; */
-	font-size: 14px;
 }
 /* フォームを囲むボックス 大枠*/
 .contact-box{
@@ -65,7 +63,7 @@ button.btn {
   line-height: 1.5;
   position: relative;
   display: inline-block;
-  padding: 1rem 4rem;
+  padding: 1em 10rem;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -91,6 +89,6 @@ button.btn {
   border-bottom: 2px solid green;
 }
 
-a.btn--radius {
+.btn--radius {
   border-radius: 100vh;
 }
