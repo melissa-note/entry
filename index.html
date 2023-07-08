@@ -15,12 +15,13 @@
 <option value="【新宿】7/8（土）18:30～">【新宿】7/8（土）18:30～20:30</option>
             </select>
         
-        <p>あなたと他のメンバーとの相性診断のため、質問に回答してください。</p>
-<span class="must bold">*初回のみ必須</span>　<span class="fz-12px">*変更なければ回答不要です。予約エラーが出る場合は全て回答をお願いします。</span>
+        <p class="bold">あなたと他のメンバーとの相性診断のため、質問に回答してください。</p>
+<p class="must">*初回のみ必須</p>
+        <p class="fz-12px">*変更なければ回答不要です。予約エラーが出る場合は全て回答をお願いします。</p>
 <details><summary class="center bold">回答する<span class="fz-14px">（所要時間約1分）</span></summary>
     
     <div class="contact-box">
-    <p>あなたのことについて</p>        
+    <p class="bold">あなたのことについて</p>        
     <p class="dotted2">ニックネーム</p>
         <span class ="must">*当日の参加者に公開されます。</span>
         <div>            
@@ -41,10 +42,9 @@
         </div>
     </div>
     <div class="contact-box">
-<p>理想の相手について</p>        
+<p class="bold">理想の相手について</p>        
         <div>   
-        <p class="dotted1">年齢層</p>   
-        <span class="fz-12px">*複数選択可</span>      
+        <span class="dotted1">年齢層</span>  <span class="fz-12px">*複数選択可</span>               
         <input id="20" type="checkbox" name="age1" value="20代"><label for="20">20代</label>
         <input id="30" type="checkbox" name="age1" value="30代"><label for="30">30代</label>
         <input id="40" type="checkbox" name="age1" value="40代"><label for="40">40代</label>
@@ -52,8 +52,7 @@
         <input id="any0" type="checkbox" name="age1" value="年齢気にしない"><label for="any0">年齢気にしない</label>                                                                                                      
         </div>
         <div>
-        <p class="dotted1"　required>見た目</p>
-        <span class="fz-12px">*複数選択可</span>
+        <span class="dotted1">見た目</span>  <span class="fz-12px">*複数選択可</span>
         <input id="l5" type="checkbox" name="looks1" value="フェム（女性っぽい）"><label for="l5">フェム（女性っぽい）</label>
         <input id="l6" type="checkbox" name="looks1" value="中性（その中間）"><label for="l6">中性（その中間）</label>
         <input id="l7" type="checkbox" name="looks1" value="ボイ（男性っぽい）"><label for="l7">ボイ（男性っぽい）</label>
@@ -62,9 +61,9 @@
        </details>
         <p class="dotted">備考欄</p>
         <div>
-            <input class="form-control w-100 mt-1" name="bikou">
+            <textarea class="input-box" name="bikou">
         </div>
-        <input type="submit" class="mt-4 btn btn-primary" value="この内容で予約">
+        <input type="submit" class="btn btn--red btn--radius btn--cubic" value="この内容で予約">
     </form>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
