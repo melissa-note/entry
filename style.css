@@ -16,6 +16,9 @@
 	font-weight: bold;
 	text-align: center;
 }
+.orange{
+	color:orange;
+}
 /* dot line */
 .dotted {
         margin-top: 1em;
